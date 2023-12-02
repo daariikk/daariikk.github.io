@@ -1,0 +1,320 @@
+:root{
+    --main_color: #39324E;
+}
+.basket-main{
+    position: relative;
+    top: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Montserrat;
+    font-style: normal;
+    line-height: normal;
+    flex-wrap: wrap;
+    margin-bottom: 150px;
+}
+.basket-item{
+    margin-top: 30px;
+    display: flex;
+}
+.description-item{
+    width: 1050px;
+    display: flex;
+    flex-direction: column;
+}
+.title-cost-block, .features-product{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.features-item{
+    display: flex;
+    justify-content: flex-start;
+}
+.item-img{
+    margin-right: 30px;
+}
+.item-img img{
+    width: 320px;
+    height: 320px;
+}
+.title-col h2{
+    color: var(--main_color);
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.title-col p{
+    color: #5A1061;
+    text-align: left;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.4px;
+}
+.cost-item{
+    color: var(--main_color);
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 3px;
+}
+.features-item h3{
+    color: var(--main_color);
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.features-item p{
+    color: #908D9A;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.title-cost-block{
+    margin-bottom: 100px;
+}
+.articul-item, .proba-item, .size-item{
+    margin-right: 100px;
+}
+
+.del-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; 
+    transition: 0.5s;
+}
+.del-item img{
+    width: 77px;
+    height: 81px;
+    
+}
+.del-item button{
+    border: none;
+    background: transparent;
+    overflow: hidden;
+  
+}
+
+.del-item:hover{
+    box-shadow: 0 0 20px 5px rgba(57, 50, 78, 0.5);
+    scale: 1.1;
+}
+.articul-item, .proba-item, .size-item, .insert-item{
+    display: block;
+    text-align: left;
+}
+.total-amount {
+    margin-top: 60px;
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+.total-amount h2{
+    color: var(--main_color);
+    font-family: Montserrat;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    margin-right: 150px;
+}
+.total-amount span{
+    color: var(--main_color);
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.input-basket{
+    width: 300px;
+    height: 80px;
+    flex-shrink: 0;
+    background: none;
+    border-radius: 34px;
+    border: 2px solid var(--main_color);
+    color: #39324E;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.input-basket:hover{
+    background: #E0E0E0;
+    /* box-shadow: 0 0 20px 5px rgba(57, 50, 78, 0.5); */
+}
+@media (max-width: 1550px){
+    .item-img img{
+        width: 220px;
+        height: 220px;
+    }
+    .title-col h2{
+        font-size: 27px;
+    }
+    .title-col p{
+        font-size: 14px;
+    }
+    .cost-item{
+        font-size: 35px;
+    }
+    .features-item h3{
+        font-size: 14px;
+    }
+    .features-item p{
+        font-size: 14px;
+    }
+    .articul-item, .proba-item, .size-item{
+        margin-right: 70px;
+    }
+    .title-cost-block{
+        margin-bottom: 65px;
+    }
+    .del-item img{
+        width: 52px;
+        height: 54px;
+    }
+    .total-amount h2{
+        font-size: 24px;
+    }
+    .total-amount span{
+        font-size: 27px;
+    }
+    .input-basket{
+        width: 200px;
+        height: 60px;
+        font-size: 16px;
+    }
+}
+@media (max-width:1100px) {
+
+    .description-item{
+        width: 850px;
+    } 
+
+}
+ @media (max-width: 950px) {
+    .description-item{
+        width: 500px;
+    }
+    .title-cost-block{
+        margin-bottom: 25px;
+    }
+    .features-item{
+        display: block;
+        justify-content: flex-start;
+    }
+    .articul-item, .proba-item, .size-item, .insert-item{
+        width: 220px;
+        display: flex;
+        justify-content: space-between;    
+    }
+    .features-item h3{
+        margin-bottom: 10px;
+    }
+    .cost-item{
+        font-size: 30px;
+    }
+ }
+ @media (max-width:700px) {
+    .title-cost-block{
+        display: block;
+        justify-content: flex-start;
+    }
+    .title-col p, .cost-item{
+        text-align: left;
+    }
+    .articul-item, .proba-item, .size-item, .insert-item{
+        width: 200px;
+        margin-right: 30px;
+    }
+    .description-item{
+        width: auto;
+    }
+ }
+ @media (max-width:600px) {
+    
+    .basket-item{
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 320px;
+    }
+    .title-cost-block{
+        display: block;
+        justify-content: center;
+
+    }
+    .title-col h2, .title-col p, .cost-item{
+        width: 320px;
+        text-align: center;
+    }
+    .features-product {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center; /* Выравниваем элементы по вертикали по центру */
+        justify-content: center; /* Выравниваем элементы по горизонтали по центру */
+    }
+    
+    .features-item {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center; /* Выравниваем элементы внутри features-item по вертикали по центру */
+        gap: 20px; /* Добавляет промежуток между элементами */
+    }
+    
+    .del-item {
+        margin-top: 20px;
+        /* display: flex; */
+        justify-content: flex-end; /* Выравниваем элементы внутри del-item по вертикали по центру */
+    }
+    .articul-item, .proba-item, .size-item, .insert-item{
+        padding-left: 30px;
+        padding-right: 10px;
+        width: 320px;
+        display: flex;
+        justify-content: space-between;    
+    }
+    .total-amount h2{
+        font-size: 20px;
+        margin-right: 30px;
+    }
+    .total-amount span{
+        font-size: 20px;
+    }
+    .input-basket{
+        width: 200px;
+        height: 60px;
+        font-size: 16px;
+    }
+ }

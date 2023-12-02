@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="css/header.css">
+    <link rel='stylesheet' href="css/header-search.css">
+    <link rel='stylesheet' href="css/auth.css">
+    <link rel='stylesheet' href="css/footer.css">
+    <link rel='stylesheet' href="css/reset.css">
+    <title>Авторизация</title>
+    <link rel="icon" type="image/png" href="img/фавиконка.png">
+</head>
+
+<body>
+    <header>
+        <div class="container-header">
+            <div class="header-left">
+                
+                <a href="index.html"><img src="img/Pearl Whirlwind.png" alt="logo"></a>
+                <a href="index.html"><p>сеть ювелирных<br>
+                    украшений</p></a>
+               
+
+            </div>
+            <div class="header-right">
+                <img src="img/profile.png" alt="profile">
+                <a href="registration.html">
+                    <p>Личный кабинет</p>
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="header-search">
+        <div class="header-fon">
+            <h1 class="title-site">ювелирные украшения</h1>
+            <div class="burger-search-icons">
+                <div class="search-box">
+                    <input class="search-input" type="text" placeholder="Введите...">
+                    <button class="search-button" type="submit">
+                        <img src="img/lypa.png" alt="Лупа">
+                    </button>
+                </div>
+                <div class="icons">
+                    <a><img src="img/vector-heart.svg" alt="Избранное"></a>
+                    <a href="basket.html"><img src="img/корзина.png"
+                            alt="корзина"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="auth">
+        <div class="auth-primary">
+
+            <form class="registration">
+                <div class="title-auth-primary">
+                    <h2>ЗАРЕГИСТИРОВАТЬСЯ НА САЙТЕ PEARL WHIRLWIND </h2>
+                </div>
+                <div class="field-label">
+                    <label for="name"></label>
+                    <input type="text" id="name" name="name" required placeholder="Ваше имя:">
+
+                    <label for="email"></label>
+                    <input type="email" id="email" name="email" required placeholder="Email:">
+
+                    <label for="password"></label>
+                    <input type="password" minlength="8" id="password" name="password" required
+                        placeholder="Придумайте пароль:">
+
+                    <label for="confirmPassword"></label>
+                    <input type="password" minlength="8" id="confirmPassword" name="confirmPassword" required
+                        placeholder="Повторите пароль:">
+
+                </div>
+                <div class="checkbox-container">
+                    <div class="checkbox-1">
+                        <input type="checkbox" id="subscribe" name="subscribe">
+                        <label for="subscribe">Я хочу получать рекламную рассылку</label>
+
+                    </div>
+                    <div class="checkbox-2">
+                        <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+                        <label for="privacyPolicy">Я ознакомился и согласен с политикой конфиденциальности</label>
+
+                    </div>
+                </div>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+
+
+        <div class="auth-input">
+            <form class="input-reg">
+                <div class="title-auth-primary">
+                    <h2>ВХОД ДЛЯ ЗАРЕГИСТРИРОВАННЫХ ПОЛЬЗОВАТЕЛЕЙ</h2>
+                </div>
+                <div class="field-label">
+                    <label for="email"></label>
+                    <input type="email" id="email" name="email" required placeholder="Email:">
+
+                    <label for="password"></label>
+                    <input class='end-input' type="password" minlength="8" id="password" name="password" required
+                        placeholder="Пароль:">
+                    <div class="forgot"><a>Забыли пароль?</a></div>
+                </div>
+                <button class="input-button" type="submit">Войти</button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-box-1">
+            <h4>О компании</h4>
+            <hr />
+            <br />
+            <p>Сеть ювелирных украшений Pearl Whirlwind — это не просто покупка украшения, это инвестиция в ваши воспоминания, эмоции и неповторимый стиль. Доверьтесь нашему опыту и станьте частью истории красоты с Pearl Whirlwind.</p>
+        </div>
+        <div class="footer-box-2">
+            <h4>Информация</h4>
+            <hr />
+            <br />
+            <ul class="footer-list">
+                <li><a href="#">Гарантии</a></li>
+                <br />
+                <li><a href="#">Оплата и доставка</a></li>
+                <br />
+                <li><a href="#">Примерка</a></li>
+                <br />
+                <li><a href="#">Сертификация</a></li>
+                <br />
+                <li><a href="podarok.html">Подарочная карта</a></li>
+                <br />
+                <li><a href="#">Служба поддержки</a></li>
+            </ul>
+        </div>
+        <div class="footer-box-3">
+            <h4>Местонахождение</h4>
+            <hr />
+            <br />
+            <p>
+                
+                г. Москва ул. Мичуринский проспект 14<br>
+                +7 (999) 999-99-99<br>
+                г. Москва ул. Ломоносовский проспект 54<br>
+                +7 (999) 999-99-99<br>
+                г. Москва ул. Проспект Вернадского 88<br>
+                +7 (999) 999-99-99
+            
+            </p>
+        </div>
+    </footer>
+    <script src="js/script-form.js"></script>
+</body>
+
+</html>

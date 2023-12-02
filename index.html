@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel='stylesheet' href="css/header.css">
+    <link rel='stylesheet' href="css/header-search.css">
+    <link rel='stylesheet' href="css/catalog.css">
+    <link rel='stylesheet' href="css/footer.css">
+    <link rel='stylesheet' href="css/reset.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров</title>
+    <link rel="icon" type="image/png" href="img/фавиконка.png">
+</head>
+
+<body>
+    <header>
+        <div class="container-header">
+            <div class="header-left">
+                
+                    <a href="index.html"><img src="img/Pearl Whirlwind.png" alt="logo"></a>
+                    <a href="index.html"><p>сеть ювелирных<br>
+                        украшений</p></a>
+               
+
+            </div>
+            <div class="header-right">
+                <img src="img/profile.png" alt="profile">
+                <a href="registration.html">
+                    <p>Личный кабинет</p>
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="header-search">
+        <div class="header-fon">
+            <h1 class="title-site">ювелирные украшения</h1>
+            <div class="burger-search-icons">
+                <div class="search-box">
+                    <input class="search-input" type="text" placeholder="Введите...">
+                    <button class="search-button" type="submit" onclick="searchProducts()">
+                        <img src="img/lypa.png" alt="Лупа">
+                    </button>
+                </div>
+                <div class="icons">
+                    <a><img src="img/vector-heart.svg" alt="Избранное"></a>
+                    <a href="basket.html"><img src="img/корзина.png"
+                            alt="корзина"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class='product_catalog'>
+        <div class="categories">
+            <button class="filter-button">ФИЛЬТРЫ</button>
+            <!-- <p>КОЛИЧЕСТВО 1202</p> -->
+            <!-- <hr align="left" size="1" color="#6D6978" /> -->
+            <form>
+                <div class="type">
+                    <p>
+                        <b3>ТИП УКРАШЕНИЯ</b3>
+                    </p>
+                    <ul>
+                        <li><label><input class="custom-checkbox" type="checkbox" name="type" id="ring"><label
+                                    for="ring"></label>Кольца</label></li>
+                        <li><label><input class="custom-checkbox" type="checkbox" name="type"
+                                    id="earring">Серьги</label></li>
+                        <li><label><input class="custom-checkbox" type="checkbox" name="type"
+                                    id="pendant">Подвески</label></li>
+                        <li><label><input class="custom-checkbox" type="checkbox" name="type"
+                                    id="bracelet">Браслеты</label></li>
+                        <li><label><input class="custom-checkbox" type="checkbox" name="type" id="brooch">Броши</label>
+                        </li>
+                        <li><label><input class="custom-checkbox" type="checkbox" name="type"
+                                    id="necklace">Колье</label></li>
+                    </ul>
+
+                    <hr align="left" size="1" color="#6D6978" />
+                </div>
+
+                <div class="special-buttom">
+                    <div class='price'>
+                        <p>
+                            <b3>ЦЕНА</b3>
+                        </p>
+
+                        <div class="price-input">
+                            <div class="field">
+                                <span>Min</span>
+                                <input type="number" class="input-min" placeholder="20 000" step="1000">
+                            </div>
+                            <div class="separator">-</div>
+                            <div class="field">
+                                <span>Max</span>
+                                <input type="number" class="input-max" placeholder="100 000" step="1000">
+                            </div>
+                        </div>
+                        <div class="slider">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="range-input">
+                            <input type="range" class="range-min" min="0" max="10000000" value="20000" step="1000">
+                            <input type="range" class="range-max" min="1000" max="50000000" value="10000" step="1000">
+                        </div>
+                        <hr align="left" size="1" color="#6D6978" />
+                    </div>
+
+                    <div class='size'>
+                        <p>
+                            <b3>РАЗМЕР УКРАШЕНИЯ</b3>
+                        </p>
+                        <div class='button-size'>
+                            <div class='row_1_button'>
+                                <input id="checkbox_size_16" type="checkbox" name="checkbox_size" value="16">
+                                <label for="checkbox_size_16"><span id="size_word">16</span></label>
+                                <input id="checkbox_size_16.5" type="checkbox" name="checkbox_size" value="16.5">
+                                <label for="checkbox_size_16.5"><span id="size_word">16.5</span></label>
+                                <input id="checkbox_size_17" type="checkbox" name="checkbox_size" value="17">
+                                <label for="checkbox_size_17"><span id="size_word">17</span></label>
+                                <input id="checkbox_size_17.5" type="checkbox" name="checkbox_size" value="17.5">
+                                <label for="checkbox_size_17.5"><span id="size_word">17.5</span></label>
+                            </div>
+                            <div class='row_2_button'>
+                                <input id="checkbox_size_18" type="checkbox" name="checkbox_size" value="18">
+                                <label for="checkbox_size_18">18</label>
+                                <input id="checkbox_size_18.5" type="checkbox" name="checkbox_size" value="18.5">
+                                <label for="checkbox_size_18.5">18.5</label>
+                                <input id="checkbox_size_19" type="checkbox" name="checkbox_size" value="19">
+                                <label for="checkbox_size_19">19</label>
+                                <input id="checkbox_size_19.5" type="checkbox" name="checkbox_size" value="19.5">
+                                <label for="checkbox_size_19.5">19.5</label>
+                            </div>
+                            <div class='row_3_button'>
+                                <input id="checkbox_size_20" type="checkbox" name="checkbox_size" value="20">
+                                <label for="checkbox_size_20">20</label>
+                                <input id="checkbox_size_20.5" type="checkbox" name="checkbox_size" value="20.5">
+                                <label for="checkbox_size_20.5">20.5</label>
+                                <input id="checkbox_size_21" type="checkbox" name="checkbox_size" value="21">
+                                <label for="checkbox_size_21">21</label>
+                                <input id="checkbox_size_21.5" type="checkbox" name="checkbox_size" value="21.5">
+                                <label for="checkbox_size_21.5">21.5</label>
+                            </div>
+                        </div>
+
+
+                        <hr align="left" size="1" color="#6D6978" />
+                    </div>
+
+                    <div class='proba'>
+                        <p>
+                            <b3>ПРОБА МЕТАЛЛА</b3>
+                        </p>
+                        <div class='button-proba'>
+                            <input id="checkbox_proba_950" type="checkbox" name="checkbox_proba" value="950">
+                            <label for="checkbox_proba_950">950</label>
+                            <input id="checkbox_proba_750" type="checkbox" name="checkbox_proba" value="750">
+                            <label for="checkbox_proba_750">750</label>
+                            <input id="checkbox_proba_585" type="checkbox" name="checkbox_proba" value="585">
+                            <label for="checkbox_proba_585">585</label>
+
+                        </div>
+                        <hr align="left" size="1" color="#6D6978" />
+                    </div>
+                    <script>
+                        const buttonSets = document.querySelectorAll('.button-size .row_1_button, .button-size .row_2_button, .button-size .row_3_button, .proba .button-proba');
+
+                        buttonSets.forEach(buttonSet => {
+                            const buttons = buttonSet.querySelectorAll('label');
+
+                            buttons.forEach(button => {
+                                button.addEventListener('click', () => {
+                                    button.classList.toggle('clicked');
+                                });
+                            });
+                        });
+                    </script>
+                </div>
+                <div class="button_apply">
+                    <button class="apply">
+                        Применить
+                    </button>
+                </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const filterButton = document.querySelector('.filter-button');
+                        const filterForm = document.querySelector('form');
+
+                        filterButton.addEventListener('click', function () {
+                            filterForm.classList.toggle('visible');
+                        });
+                    });
+                    document.addEventListener('click', function (event) {
+                        const isClickInsideForm = filterForm.contains(event.target);
+                        const isClickOnFilterButton = filterButton.contains(event.target);
+
+                        if (!isClickInsideForm && !isClickOnFilterButton) {
+                            filterForm.classList.remove('visible');
+                        }
+                    });
+
+                </script>
+            </form>
+        </div>
+        <div class="products">
+            <a href="card1.html">
+                <div class="item item-1">
+                    <img src="img/1.png">
+                    <div class="name_cost">
+                        <p class="name">Бриллиантовый Момент</p>
+                        <p class="cost">50 999 999 ₽</p>
+                    </div>
+                </div>
+            </a>
+            <a href="card2.html">
+                <div class="item item-2">
+                    <img src="img/2.png">
+                    <div class="name_cost">
+                        <p class="name">Звездная магия</p>
+                        <p class="cost">699 999 ₽</p>
+                    </div>
+                </div>
+            </a>
+            <a href="card3.html">
+                <div class="item item-3">
+                    <img src="img/3.png">
+                    <div class="name_cost">
+                        <p class="name">Лунный поцелуй</p>
+                        <p class="cost">1 699 999 ₽</p>
+                    </div>
+                </div>
+            </a>
+            <a href="card4.html">
+                <div class="item item-4">
+                    <img src="img/4.png">
+                    <div class="name_cost">
+                        <p class="name">Сияющий момент</p>
+                        <p class="cost">4 599 999 ₽</p>
+                    </div>
+                </div>
+            </a>
+            <a href="card5.html">
+                <div class="item item-5">
+                    <img src="img/5.png">
+                    <div class="name_cost">
+                        <p class="name">Сияющий рассвет</p>
+                        <p class="cost">2 199 999 ₽</p>
+                    </div>
+                </div>
+            </a>
+            <a href="card6.html">
+                <div class="item item-6">
+                    <img src="img/6.png">
+                    <div class="name_cost">
+                        <p class="name">Утренний луч</p>
+                        <p class="cost">999 999 ₽</p>
+                    </div>
+                </div>
+            </a>
+            
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-box-1">
+            <h4>О компании</h4>
+            <hr />
+            <br />
+            <p>Сеть ювелирных украшений Pearl Whirlwind — это не просто покупка украшения, это инвестиция в ваши
+                воспоминания, эмоции и неповторимый стиль. Доверьтесь нашему опыту и станьте частью истории красоты с
+                Pearl Whirlwind.</p>
+        </div>
+        <div class="footer-box-2">
+            <h4>Информация</h4>
+            <hr />
+            <br />
+            <ul class="footer-list">
+                <li><a href="#">Гарантии</a></li>
+                <br />
+                <li><a href="#">Оплата и доставка</a></li>
+                <br />
+                <li><a href="#">Примерка</a></li>
+                <br />
+                <li><a href="#">Сертификация</a></li>
+                <br />
+                <li><a href="podarok.html">Подарочная карта</a></li>
+                <br />
+                <li><a href="#">Служба поддержки</a></li>
+            </ul>
+        </div>
+        <div class="footer-box-3">
+            <h4>Местонахождение</h4>
+            <hr />
+            <br />
+            <p>
+
+                г. Москва ул. Мичуринский проспект 14<br>
+                +7 (999) 999-99-99<br>
+                г. Москва ул. Ломоносовский проспект 54<br>
+                +7 (999) 999-99-99<br>
+                г. Москва ул. Проспект Вернадского 88<br>
+                +7 (999) 999-99-99
+
+            </p>
+        </div>
+    </footer>
+    <script src="js/scripts.js"></script>
+    <script src="js/product_card.js"></script>
+    <script src="js/poisk.js"></script>
+    
+</body>
+
+</html>

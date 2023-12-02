@@ -1,0 +1,175 @@
+.header-search {
+    position: relative;
+    top:80px;
+    z-index: 40;
+    height: 250px;
+    background-color: #39324E;
+    background-image: url("img/фон поиск.png");
+    background-size: cover;
+    background-position: center;
+    
+}
+.header-fon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+}
+
+.title-site {
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+}
+
+.burger-search-icons {
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+}
+.burger{
+    display: block;
+    cursor: pointer;
+}
+.burger span{
+    display: block;
+    align-items: center;
+    width: 40px; /* Ширина линии бургера */
+    height: 4px; /* Высота линии бургера */
+    background-color: #fff; /* Цвет линии бургера */
+    margin-bottom: 8px; /* Расстояние между линиями бургера */
+    transition: background-color 0.3s ease;
+}
+.burger span:last-child{
+    margin-bottom: 0px;
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    max-width: 1000px; 
+    margin-left: 10px;
+}
+.search-input {
+    box-sizing: border-box;
+    width: 1000px;
+    height: 60px;
+    border-radius: 10px;
+    padding-top: 7px ;
+    padding-left: 80px;
+    margin-right: 20px;
+}
+.search-input::placeholder {
+    color: #39324E;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.4px;
+}
+
+.search-button {
+    width: 50px; /* Задаем ширину кнопки поиска */
+    height: 50px; /* Задаем высоту кнопки поиска */
+    background-color: transparent; /* Прозрачный фон кнопки */
+    border: none; /* Убираем границу у кнопки */
+    cursor: pointer;
+}
+.icons{
+    display: inline-block;
+}
+.icons img {
+    display: inline-block;
+    width: 37px; /* Задаем ширину иконок */
+    height: 34px; /* Задаем высоту иконок */
+    margin-left: 30px;
+}
+
+
+
+.cart-counter {
+    color: #FFF;
+    font-size: 18px; /* Задаем размер шрифта счетчика корзины */
+    margin-left: 5px; /* Даем отступ слева от счетчика корзины */
+}
+
+
+@media (max-width: 1240px) {
+    .search-box {
+        max-width: 850px; 
+    }
+    .search-input {
+        width: 700px;
+    }
+    
+}
+
+@media (max-width: 950px) {
+    .title-site {
+        font-size: 25px;
+    }
+    .search-input {
+        width: 600px;
+    }
+    .search-button {
+        width: 40px; /* Задаем ширину кнопки поиска */
+        height: 40px; /* Задаем высоту кнопки поиска */
+    }
+    .icons img {
+        display: inline-block;
+        width: 27px; /* Задаем ширину иконок */
+        height: 24px; /* Задаем высоту иконок */
+        margin-left: 10px;
+    }
+}
+@media (max-width: 950px) {
+    .search-input {
+        width: 400px;
+    }
+}
+@media (max-width: 600px) {
+    .title-site {
+        font-size: 16px;
+    }
+    .search-input {
+        padding-left: 30px;
+        width: 220px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    .search-button {
+        padding: 0px;
+        width: 30px; /* Задаем ширину кнопки поиска */
+        height: 30px; /* Задаем высоту кнопки поиска */
+    }
+    .search-button img{
+        width: 20px; /* Задаем ширину кнопки поиска */
+        height: 20px; /* Задаем высоту кнопки поиска */
+    }
+    .icons img {
+        display: inline-block;
+        width: 23px; /* Задаем ширину иконок */
+        height: 19px; /* Задаем высоту иконок */
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
+    .header-search {
+        height: 150px;
+    }
+    .burger-search-icons {
+        margin-top: 20px;
+    }
+}
+

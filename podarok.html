@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel='stylesheet' href="css/header.css">
+    <link rel='stylesheet' href="css/header-search.css">
+    <link rel='stylesheet' href="css/podarok.css">
+    <link rel='stylesheet' href="css/footer.css">
+    <link rel='stylesheet' href="css/reset.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подарочная карта</title>
+    <link rel="icon" type="image/png" href="img/фавиконка.png">
+</head>
+
+<body>
+    <header>
+        <div class="container-header">
+            <div class="header-left">
+                
+                <a href="index.html"><img src="img/Pearl Whirlwind.png" alt="logo"></a>
+                <a href="index.html"><p>сеть ювелирных<br>
+                    украшений</p></a>
+               
+
+            </div>
+            <div class="header-right">
+                <img src="img/profile.png" alt="profile">
+                <a href="registration.html">
+                    <p>Личный кабинет</p>
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="header-search">
+        <div class="header-fon">
+            <h1 class="title-site">ювелирные украшения</h1>
+            <div class="burger-search-icons">
+                <div class="search-box">
+                    <input class="search-input" type="text" placeholder="Введите...">
+                    <button class="search-button" type="submit">
+                        <img src="img/lypa.png" alt="Лупа">
+                    </button>
+                </div>
+                <div class="icons">
+                    <a><img src="img/vector-heart.svg" alt="Избранное"></a>
+                    <a href="basket.html"><img src="img/корзина.png"
+                            alt="корзина"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="podarok-title">
+        <h2>ПОДАРОЧНАЯ КАРТА </h2>
+        <p>Pearl Whirlwind</p>
+    </div>
+    <section class="podarok-container">
+
+        <div class="podarok-content">
+            <div class="content-gallery">
+                <img class="main-img" src="img/подарочная карта синяя.png">
+                <ul>
+                    <li class="cart-item"><img src="img/подарочная карта синяя.png"></li>
+                    <li class="cart-item"><img src="img/подарочная карта золотая.png"></li>
+                </ul>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const cartItems = document.querySelectorAll(".cart-item img");
+                    const mainImg = document.querySelector(".main-img");
+
+                    cartItems.forEach(item => {
+                        item.addEventListener("click", function () {
+                            mainImg.src = item.src;
+                        });
+                    });
+                });
+
+            </script>
+            <div class="content-description">
+                <div class="choice-text">
+                    <p>выберите номинал карты</p>
+                </div>
+                <div class="choice-radio">
+                    <label for="50000">50 000</label>
+                    <input id="50000" type="radio" name="nom" value="50000">
+                    <label for="100000">100 000</label>
+                    <input id="100000" type="radio" name="nom" value="100000">
+                    <label for="500000">500 000</label>
+                    <input id="500000" type="radio" name="nom" value="500000">
+                </div>
+                <script>
+                    const choiceButtons = document.querySelectorAll('.choice-radio label');
+                    choiceButtons.forEach(button => {
+                        button.addEventListener('click', () => {
+                            choiceButtons.forEach(btn => {
+                                btn.classList.remove('clicked');
+                            });
+                            button.classList.add('clicked');
+                        });
+                    });
+                </script>
+                <div class="choice-nominal">
+                    <p>Нужен другой номинал?</p>
+
+                    <div class="nom-container">
+                        <label for="nominal"></label>
+                        <input type="number" id="nominal" name="name" required placeholder="Введите сумму">
+                        <span>руб</span>
+                    </div>
+
+                </div>
+                <div class="button-nom">
+                    <button>Оформить</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-box-1">
+            <h4>О компании</h4>
+            <hr />
+            <br />
+            <p>Сеть ювелирных украшений Pearl Whirlwind — это не просто покупка украшения, это инвестиция в ваши
+                воспоминания, эмоции и неповторимый стиль. Доверьтесь нашему опыту и станьте частью истории красоты с
+                Pearl Whirlwind.</p>
+        </div>
+        <div class="footer-box-2">
+            <h4>Информация</h4>
+            <hr />
+            <br />
+            <ul class="footer-list">
+                <li><a href="#">Гарантии</a></li>
+                <br />
+                <li><a href="#">Оплата и доставка</a></li>
+                <br />
+                <li><a href="#">Примерка</a></li>
+                <br />
+                <li><a href="#">Сертификация</a></li>
+                <br />
+                <li><a href="podarok.html">Подарочная карта</a></li>
+                <br />
+                <li><a href="#">Служба поддержки</a></li>
+            </ul>
+        </div>
+        <div class="footer-box-3">
+            <h4>Местонахождение</h4>
+            <hr />
+            <br />
+            <p>
+
+                г. Москва ул. Мичуринский проспект 14<br>
+                +7 (999) 999-99-99<br>
+                г. Москва ул. Ломоносовский проспект 54<br>
+                +7 (999) 999-99-99<br>
+                г. Москва ул. Проспект Вернадского 88<br>
+                +7 (999) 999-99-99
+
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

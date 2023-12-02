@@ -1,0 +1,268 @@
+:root {
+    --main-color: #39324E;
+}
+
+.auth {
+    position: relative;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.registration,
+.input-reg {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.input-reg {
+    align-self: flex-start;
+}
+
+.title-auth-primary {
+    color: #5A1061;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 650px;
+}
+
+.field-label {
+    padding: 15px 0 0;
+}
+
+.field-label input {
+    width: 500px;
+    border: 0;
+    border-bottom: 2px solid #CCCCCC;
+    outline: 0;
+    font-size: 20px;
+    color: var(--main-color);
+    padding: 7px 0;
+    /* background: transparent; */
+    transition: border-color 0.2s;
+    margin-bottom: 50px;
+}
+
+.field-label input:last-child {
+    margin-bottom: 0px;
+}
+
+.error-message {
+    color: red;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.error {
+    border-bottom-color: red !important;
+}
+
+.field-label input:focus {
+    padding-bottom: 6px;
+    border-width: 3px;
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+
+
+.field-label input:not(:placeholder-shown):valid {
+    border-bottom-color: green;
+    /* Цвет рамки, если поле ввода валидно */
+}
+
+.field-label input:not(:placeholder-shown):invalid {
+    border-bottom-color: red;
+    /* Цвет рамки, если поле ввода невалидно */
+}
+
+.forgot a {
+    margin-top: 10px;
+    list-style: none;
+    color: #8F81B9;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.32px;
+    margin-bottom: 50px;
+}
+
+.input-reg .end-input {
+    margin-bottom: 0px;
+}
+
+button {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 240px;
+    height: 60px;
+    color: #FFF;
+
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #4C4561;
+}
+
+.input-button {
+    width: 170px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    margin: 50px 0px;
+}
+
+.checkbox-1 {
+    margin-bottom: 20px;
+}
+
+.checkbox-container input {
+    margin-right: 8px;
+}
+
+.checkbox-1,
+.checkbox-2 {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-1 label,
+.checkbox-2 label {
+    margin: 0;
+    /* Убирает внешние отступы у label, чтобы они были выровнены по вертикали */
+}
+
+@media (max-width: 1450px) {
+    form {
+        width: 450px;
+    }
+
+    .title-auth-primary {
+
+        font-size: 14px;
+        margin-bottom: 50px;
+    }
+
+    form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        width: 500px;
+    }
+
+    .field-label input {
+        width: 400px;
+        font-size: 14px;
+        margin-bottom: 50px;
+    }
+
+
+    .error-message {
+        color: red;
+        margin-top: 5px;
+        font-size: 10px;
+    }
+
+    .checkbox-container label {
+        font-size: 12px;
+    }
+
+    .forgot a {
+        color: #4C4561;
+        margin-top: 10px;
+        font-size: 9px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width:600px) {
+    form {
+        width: 340px;
+    }
+
+    .title-auth-primary {
+
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        width: 300px;
+    }
+
+    .field-label input {
+        width: 250px;
+        font-size: 10px;
+        margin-bottom: 30px;
+    }
+
+
+    .error-message {
+        color: red;
+        margin-top: 5px;
+        font-size: 10px;
+    }
+
+    .checkbox-container label {
+        font-size: 8px;
+    }
+
+    .forgot a {
+        color: #4C4561;
+        margin-top: 10px;
+        font-size: 9px;
+        margin-bottom: 30px;
+    }
+    .checkbox-container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 20px 0px;
+    }
+    .checkbox-1 {
+        margin-bottom: 10px;
+    }
+    form button {
+        width: 170px;
+        height: 50px;
+        font-size: 10px;
+    }
+}
