@@ -1,25 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
     updateTotalAmount();
-    // Получение информации о товаре из localStorage
     const basketItems = JSON.parse(localStorage.getItem('basketItems'));
-    // alert(JSON.stringify(basketItems));
-    // Проверка наличия информации
-    if (basketItems && basketItems.length > 0) {
-        // Получите последний элемент массива
-        const lastItem = basketItems[basketItems.length - 1];
-    
-        // Отображение информации в соответствующих элементах
-        displayItemInfo(lastItem);
+    for (let i = 0; i < basketItems.length; i++) {
+        if (basketItems[i] !== null) {
+            displayItemInfo(basketItems[i], i);
+        }
     }
+
     updateTotalAmount();
 });
 
-function displayItemInfo(itemInfo) {
+function displayItemInfo(itemInfo, index) {
     const basketContent = document.getElementById('basket-content');
-
-    // Создание HTML-разметки с информацией о товаре
     const itemHTML = `
-        <div class="basket-item" id="item3">
+        <div class="basket-item" id="${itemInfo.articul}">
             <div class="item-img">
     <img src="${itemInfo.img}">
 </div>
@@ -53,39 +47,39 @@ function displayItemInfo(itemInfo) {
             </div>
         </div>
         <div class="del-item">
-            <button onclick="removeItem('item3')"><img src="img/basket.png" border="0"></button>
+            <button onclick="removeItem('${itemInfo.articul}')"><img src="img/basket.png" border="0"></button>
         </div>
     </div>
-</div>
-            
+</div>        
         </div>
     `;
+    basketContent.innerHTML += itemHTML;
 
-    // Вставка HTML в элемент корзины
-    
-    basketContent.innerHTML = itemHTML;
-    
 }
-function removeItem(itemId) {
-    // const item = document.getElementById(itemId);
-    // if (item) {
-    //     item.remove();
-    //     updateTotalAmount();
-    // }
-    const item = document.getElementById(itemId);
+
+function removeItem(itemArticul) {
+    // Находим элемент по артикулу
+    const item = document.getElementById(itemArticul);
+    
     if (item) {
-        item.remove();
-        updateTotalAmount();
-
-        // Получение текущего массива товаров из localStorage
-        const existingItems = JSON.parse(localStorage.getItem('basketItems')) || [];
-
-        // Удаление элемента из массива
-        const updatedItems = existingItems.filter(item => item.id !== itemInfo.id);
-
-        // Сохранение обновленного массива в localStorage
-        localStorage.setItem('basketItems', JSON.stringify(updatedItems));
+        item.remove();   
     }
+    
+    // Получаем текущие элементы из localStorage
+    const basketItems = JSON.parse(localStorage.getItem('basketItems')) || [];
+    
+    // Ищем индекс удаляемого элемента
+    const indexToRemove = basketItems.findIndex(item => item.articul === itemArticul);
+    
+    // Если элемент найден, удаляем его из массива
+    if (indexToRemove !== -1) {
+        basketItems.splice(indexToRemove, 1);
+
+        // Обновляем localStorage с новым массивом
+        localStorage.setItem('basketItems', JSON.stringify(basketItems));
+    }
+    
+    updateTotalAmount();
 }
 
 function updateTotalAmount() {
@@ -97,7 +91,9 @@ function updateTotalAmount() {
         (console.log('Amount:', amount));
         totalAmount += amount;
     });
-
-    // Обновляем содержимое элемента 'total-amount'
     document.querySelector('.total-amount .amount').innerText = `${totalAmount.toLocaleString()} ₽`;
+}
+
+function clearLocalStorage() {
+    localStorage.clear();
 }
